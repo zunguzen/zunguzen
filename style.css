@@ -1,0 +1,258 @@
+:root{
+  --ink: #E7E1CF;
+  --ink-2: #DED6BC;
+  --chalk: #1D3049;
+  --chalk-dim: rgba(29,48,73,0.64);
+  --rust: #A8362A;
+  --hairline: rgba(29,48,73,0.22);
+  --max-w: 760px;
+
+  /* language-tunable values — overridden per html[lang] below */
+  --font: 'Space Grotesk', sans-serif;
+  --body-lh: 1.5;
+  --title-tracking: 0.06em;
+  --hero-size: clamp(2.6rem, 7vw, 4rem);
+  --hero-tracking: -0.015em;
+  --hero-lh: 1.02;
+  --role-size: clamp(1.1rem, 2.6vw, 1.4rem);
+  --role-maxw: 42ch;
+  --caption-tracking: 0.08em;
+  --label-tracking: 0.08em;
+  --about-maxw: 62ch;
+  --links-font-size: 1.05rem;
+  --desc-font-size: 0.95rem;
+  --grid-p-size: 0.96rem;
+  --grid-p-lh: 1.5;
+  --footer-tracking: 0.06em;
+}
+
+html[lang="ru"]{
+  --font: 'Space Grotesk', 'IBM Plex Sans', sans-serif;
+  --body-lh: 1.55;
+  --title-tracking: 0.04em;
+  --hero-size: clamp(2.4rem, 6.5vw, 3.7rem);
+  --hero-tracking: -0.01em;
+  --hero-lh: 1.05;
+  --caption-tracking: 0.05em;
+  --label-tracking: 0.05em;
+  --footer-tracking: 0.04em;
+}
+
+html[lang="ja"]{
+  --font: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+  --body-lh: 1.75;
+  --title-tracking: 0.02em;
+  --hero-size: clamp(2.1rem, 6vw, 3.2rem);
+  --hero-tracking: 0;
+  --hero-lh: 1.2;
+  --role-size: clamp(1.02rem, 2.4vw, 1.2rem);
+  --role-maxw: 32ch;
+  --caption-tracking: 0.02em;
+  --label-tracking: 0.05em;
+  --about-maxw: 34em;
+  --links-font-size: 1rem;
+  --desc-font-size: 0.92rem;
+  --grid-p-size: 0.92rem;
+  --grid-p-lh: 1.7;
+  --footer-tracking: 0.02em;
+}
+
+*{ box-sizing: border-box; }
+html{ -webkit-text-size-adjust: 100%; }
+body{
+  margin:0;
+  background: var(--ink);
+  color: var(--chalk);
+  font-family: var(--font);
+  line-height: var(--body-lh);
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: var(--chalk); text-decoration: none; border-bottom: 1px solid var(--rust); }
+a:hover{ color: var(--rust); }
+a:focus-visible, button:focus-visible{
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+}
+
+.sheet{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Title block, drafting-sheet convention: identifies the drawing */
+header.titleblock{
+  border-bottom: 1px solid var(--hairline);
+}
+.titleblock-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font);
+  font-size: 12px;
+  letter-spacing: var(--title-tracking);
+  color: var(--chalk-dim);
+}
+.titleblock-inner span{ white-space: nowrap; }
+.langs a{ border-bottom: none; color: var(--chalk-dim); }
+.langs a:hover{ color: var(--rust); }
+.langs strong{ color: var(--rust); font-weight: 600; }
+
+main{ padding-top: 96px; padding-bottom: 120px; }
+
+.hero{ max-width: var(--max-w); margin: 0 auto 28px; padding: 0 24px; }
+.hero h1{
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: var(--hero-size);
+  letter-spacing: var(--hero-tracking);
+  margin: 0 0 14px;
+  line-height: var(--hero-lh);
+}
+.hero p.role{
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: var(--role-size);
+  color: var(--chalk-dim);
+  margin: 0 0 52px;
+  max-width: var(--role-maxw);
+}
+
+/* elevation profile motif */
+.profile{
+  max-width: var(--max-w);
+  margin: 0 auto 10px;
+  padding: 0 24px;
+}
+.profile svg{ width:100%; height: auto; display:block; }
+.profile-caption{
+  max-width: var(--max-w);
+  margin: 0 auto 96px;
+  padding: 0 24px;
+  font-family: var(--font);
+  font-size: 11px;
+  letter-spacing: var(--caption-tracking);
+  color: var(--chalk-dim);
+  display:flex;
+  justify-content: space-between;
+}
+
+section{ max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+section + section{ margin-top: 96px; }
+
+.label{
+  font-family: var(--font);
+  font-size: 12px;
+  letter-spacing: var(--label-tracking);
+  color: var(--rust);
+  margin: 0 0 22px;
+}
+
+.about p{
+  font-size: 1.02rem;
+  font-weight: 400;
+  max-width: var(--about-maxw);
+  margin: 0 0 1.4em;
+}
+.about p:last-child{ margin-bottom: 0; }
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+  margin-top: 4px;
+}
+.grid-item{
+  background: var(--ink);
+  padding: 28px 24px;
+}
+.grid-item h3{
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.grid-item p{
+  font-size: var(--grid-p-size);
+  color: var(--chalk-dim);
+  margin: 0;
+  line-height: var(--grid-p-lh);
+}
+
+.links{
+  display:flex;
+  flex-direction: column;
+  border-top: 1px solid var(--hairline);
+}
+.links a{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--font);
+  font-size: var(--links-font-size);
+}
+.links a .desc{
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: var(--desc-font-size);
+  color: var(--chalk-dim);
+  text-align: right;
+}
+.links a:hover .desc{ color: var(--rust); }
+
+footer{
+  border-top: 1px solid var(--hairline);
+  margin-top: 90px;
+  padding: 22px 24px;
+  font-family: var(--font);
+  font-size: 11px;
+  letter-spacing: var(--footer-tracking);
+  color: var(--chalk-dim);
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  max-width: 980px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.seal{
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--rust);
+  border-radius: 3px;
+  color: var(--rust);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: var(--font);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  transform: rotate(-2deg);
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px){
+  .grid{ grid-template-columns: 1fr; }
+  .titleblock-inner{ font-size: 10.5px; }
+  .links a{ flex-direction: column; gap: 2px; }
+  .links a .desc{ text-align: left; }
+  footer{ flex-direction: column; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .profile path.route{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw 1.6s ease-out forwards;
+  }
+}
+@keyframes draw{ to{ stroke-dashoffset: 0; } }
