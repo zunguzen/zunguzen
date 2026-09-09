@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニコライ・スモーリン</title>
+<meta name="description" content="ニコライ・スモーリン — 建築家、トレイルランナー、コーチ、そして文章を書く人。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #E7E1CF;
+    --ink-2: #DED6BC;
+    --chalk: #1D3049;
+    --chalk-dim: rgba(29,48,73,0.64);
+    --rust: #A8362A;
+    --hairline: rgba(29,48,73,0.22);
+    --max-w: 760px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ -webkit-text-size-adjust: 100%; }
+  body{
+    margin:0;
+    background: var(--ink);
+    color: var(--chalk);
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--chalk); text-decoration: none; border-bottom: 1px solid var(--rust); }
+  a:hover{ color: var(--rust); }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--rust);
+    outline-offset: 3px;
+  }
+
+  .sheet{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.titleblock{
+    border-bottom: 1px solid var(--hairline);
+  }
+  .titleblock-inner{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display:flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--chalk-dim);
+  }
+  .titleblock-inner span{ white-space: nowrap; }
+  .langs a{ border-bottom: none; color: var(--chalk-dim); }
+  .langs a:hover{ color: var(--rust); }
+  .langs strong{ color: var(--rust); font-weight: 600; }
+
+  main{ padding-top: 96px; padding-bottom: 120px; }
+
+  .hero{ max-width: var(--max-w); margin: 0 auto 28px; padding: 0 24px; }
+  .hero h1{
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.1rem, 6vw, 3.2rem);
+    letter-spacing: 0;
+    margin: 0 0 14px;
+    line-height: 1.2;
+  }
+  .hero p.role{
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.02rem, 2.4vw, 1.2rem);
+    color: var(--chalk-dim);
+    margin: 0 0 52px;
+    max-width: 32ch;
+  }
+
+  .profile{
+    max-width: var(--max-w);
+    margin: 0 auto 10px;
+    padding: 0 24px;
+  }
+  .profile svg{ width:100%; height: auto; display:block; }
+  .profile-caption{
+    max-width: var(--max-w);
+    margin: 0 auto 96px;
+    padding: 0 24px;
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--chalk-dim);
+    display:flex;
+    justify-content: space-between;
+  }
+
+  section{ max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+  section + section{ margin-top: 96px; }
+
+  .label{
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--rust);
+    margin: 0 0 22px;
+  }
+
+  .about p{
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 34em;
+    margin: 0 0 1.5em;
+  }
+  .about p:last-child{ margin-bottom: 0; }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--hairline);
+    border: 1px solid var(--hairline);
+    margin-top: 4px;
+  }
+  .grid-item{
+    background: var(--ink);
+    padding: 28px 24px;
+  }
+  .grid-item h3{
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+  .grid-item p{
+    font-size: 0.92rem;
+    color: var(--chalk-dim);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .links{
+    display:flex;
+    flex-direction: column;
+    border-top: 1px solid var(--hairline);
+  }
+  .links a{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 1rem;
+  }
+  .links a .desc{
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-weight: 300;
+    font-size: 0.92rem;
+    color: var(--chalk-dim);
+    text-align: right;
+  }
+  .links a:hover .desc{ color: var(--rust); }
+
+  footer{
+    border-top: 1px solid var(--hairline);
+    margin-top: 90px;
+    padding: 22px 24px;
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--chalk-dim);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width: 980px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .seal{
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid var(--rust);
+    border-radius: 3px;
+    color: var(--rust);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Space Grotesk', 'Zen Kaku Gothic New', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    transform: rotate(-2deg);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 560px){
+    .grid{ grid-template-columns: 1fr; }
+    .titleblock-inner{ font-size: 10.5px; }
+    .links a{ flex-direction: column; gap: 2px; }
+    .links a .desc{ text-align: left; }
+    footer{ flex-direction: column; gap: 6px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .profile path.route{
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: draw 1.6s ease-out forwards;
+    }
+  }
+  @keyframes draw{ to{ stroke-dashoffset: 0; } }
+</style>
+</head>
+<body>
+
+<header class="titleblock">
+  <div class="titleblock-inner">
+    <span>N.スモーリン — 個人サイト</span>
+    <span>建築家 / トレイルランナー</span>
+    <span class="langs"><a href="index.html">EN</a> · <a href="ru.html">RU</a> · <strong>JP</strong></span>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>ニコライ・スモーリン</h1>
+    <p class="role">建築家として働き、走ることを習慣にしています。ほかのことも、たいていこの二つから始まっています。</p>
+  </div>
+
+  <div class="profile" aria-hidden="true">
+    <svg viewBox="0 0 700 120" preserveAspectRatio="none">
+      <path class="route" d="M10.0,49.7 L21.5,45.5 L33.1,33.2 L44.6,29.0 L56.1,26.2 L67.6,25.0 L79.2,22.7 L90.7,16.7 L102.2,11.7 L113.7,10.0 L125.3,10.2 L136.8,17.2 L148.3,24.2 L159.8,32.0 L171.4,35.1 L182.9,51.2 L194.4,58.3 L205.9,68.2 L217.5,77.2 L229.0,80.5 L240.5,84.7 L252.0,90.7 L263.6,94.5 L275.1,97.5 L286.6,97.8 L298.1,84.1 L309.7,84.0 L321.2,79.7 L332.7,74.7 L344.2,79.8 L355.8,68.2 L367.3,68.2 L378.8,74.3 L390.3,78.6 L401.9,85.1 L413.4,86.6 L424.9,84.0 L436.4,93.0 L448.0,101.0 L459.5,100.9 L471.0,98.0 L482.5,88.3 L494.1,69.4 L505.6,69.8 L517.1,70.6 L528.6,69.9 L540.2,75.2 L551.7,78.4 L563.2,67.6 L574.7,62.3 L586.3,69.6 L597.8,71.5 L609.3,86.9 L620.8,92.5 L632.4,95.5 L643.9,98.3 L655.4,101.0 L666.9,108.0 L678.5,101.5 L690.0,107.2"
+            fill="none" stroke="var(--rust)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="profile-caption">
+    <span>マロカラチャエフスキー地区トレイルラン — 58.5km — 2026年5月3日</span>
+    <span>+2045m</span>
+  </div>
+
+  <section class="about">
+    <p class="label">自己紹介</p>
+    <p>本業は建築設計です。仕事以外の時間は、本、音楽、スポーツ、プログラミングなど、机に向かわないことに使っています。中でも長く続いているのがトレイルランニングで、荒れた道ほど好きになります。</p>
+    <p>その延長で、走ることや犬のアジリティを教えるようになりました。数人と定期的に練習しています。小さなランニングクラブ「Hike!RC」も始めましたが、これは自分自身が練習相手を探していたから、というのが正直な理由です。犬を二匹飼っていますが、二匹とも私の話には興味がなく、次の散歩のことしか考えていません。</p>
+    <p>ゴンゾー・ジャーナリズム(型にはまらない、当事者の視点で書くスタイル)の影響を受けた、荒削りな短い文章もよく書いています。レースの記録や、走っている最中に起きたことなど――ここではなく、テレグラムで公開しています。建物を設計していないときは、たいてい小さなウェブサイトや道具を作っています。このサイトもそのひとつです。</p>
+    <p>禅の考え方に惹かれていて、少しずつ学んでいます。生まれ育った文化ではないので、まだ入り口に立っているだけだとは思いますが、侘び寂びや茶道にある、素材への注意、繰り返しを大切にする姿勢、未完成なものを受け入れる感覚には、強く共感するところがあります。設計する建物にも、毎朝走るループにも、同じようなことが言える気がしています。菜食をしているのも、似た理由からです――主張としてではなく、日々の小さな実践として。</p>
+  </section>
+
+  <section class="what">
+    <p class="label">していること</p>
+    <div class="grid">
+      <div class="grid-item">
+        <h3>建築</h3>
+        <p>建築家として、建物やインテリア、時にはコンペ案の設計をしています。</p>
+      </div>
+      <div class="grid-item">
+        <h3>コーチング</h3>
+        <p>トレイルランニングと犬のアジリティを、個人・小グループ単位で教えています。</p>
+      </div>
+      <div class="grid-item">
+        <h3>Hike!RC</h3>
+        <p>自分で始めた小さなランニングクラブです。会費も宣伝もなく、集まって走るだけです。</p>
+      </div>
+      <div class="grid-item">
+        <h3>文章</h3>
+        <p>走ることやレースにまつわる、ゴンゾー風の短い文章を書いています。</p>
+      </div>
+      <div class="grid-item">
+        <h3>コード</h3>
+        <p>本業より面白いと感じたときに、小さなサイトや道具を作ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="elsewhere">
+    <p class="label">リンク</p>
+    <div class="links">
+      <a href="https://t.me/hike_mgzn" target="_blank" rel="noopener">
+        <span>テレグラム — 記事</span>
+        <span class="desc">t.me/hike_mgzn</span>
+      </a>
+      <a href="https://t.me/zunguzen" target="_blank" rel="noopener">
+        <span>テレグラム — 個人</span>
+        <span class="desc">@zunguzen</span>
+      </a>
+      <a href="https://github.com/zunguzen" target="_blank" rel="noopener">
+        <span>GitHub</span>
+        <span class="desc">コードと小さなプロジェクト</span>
+      </a>
+      <a href="mailto:zunguzen@gmail.com">
+        <span>メール</span>
+        <span class="desc">zunguzen@gmail.com</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>2026年作成</span>
+  <span class="seal" aria-hidden="true">NS</span>
+  <span>ニジニ・ノヴゴロド</span>
+</footer>
+
+</body>
+</html>
