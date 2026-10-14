@@ -9,4 +9,3 @@ I design buildings for a living, coach a handful of people in trail running and 
 - Telegram — [@zunguzen](https://t.me/zunguzen)
 - Strava — [strava.app.link/V6BqW2GSh6b](https://strava.app.link/V6BqW2GSh6b)
 - ITRA — [itra.run/RunnerSpace/SMOLIN.Nikolay](https://itra.run/RunnerSpace/SMOLIN.Nikolay/7432931)
-- Email — [zunguzen@gmail.com](mailto:zunguzen@gmail.com)
